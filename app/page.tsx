@@ -468,7 +468,7 @@ export default function Home() {
                 data-fade-slide
                 className="caption text-secondary/30 uppercase tracking-widest will-change-transform"
               >
-                Smart Casual
+                Vestimenta Formal
               </p>
             </div>
             <div className="flex flex-col items-center coi-gap-1">

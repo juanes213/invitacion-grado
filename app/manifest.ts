@@ -15,9 +15,9 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/png',
       },
     ],
-    name: 'Graduation Ceremony',
+    name: 'Invitación de Grado — M.C.G.B.',
     description: AppData.description,
     start_url: '/',
-    theme_color: '#181423',
+    theme_color: '#000000',
   }
 }

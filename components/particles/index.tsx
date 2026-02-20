@@ -2,21 +2,27 @@
 
 import { useEffect, useRef } from 'react'
 
-interface Particle {
+interface Piece {
   x: number
   y: number
   vx: number
   vy: number
-  size: number
+  rotation: number
+  vr: number
+  w: number
+  h: number
+  color: string
   opacity: number
 }
+
+const GOLD = ['#D4AF37', '#C9A227', '#B8960C', '#DAA520', '#E8C84A', '#BFA020']
 
 interface ParticlesProps {
   count?: number
   className?: string
 }
 
-export function Particles({ count = 50, className }: ParticlesProps) {
+export function Particles({ count = 60, className }: ParticlesProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -27,42 +33,55 @@ export function Particles({ count = 50, className }: ParticlesProps) {
     if (!ctx) return
 
     let animationId: number
-    let particles: Particle[] = []
+    let pieces: Piece[] = []
 
     const resize = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
     }
 
+    const makePiece = (yOverride?: number): Piece => ({
+      x: Math.random() * canvas.width,
+      y: yOverride ?? Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: Math.random() * 0.7 + 0.25,
+      rotation: Math.random() * Math.PI * 2,
+      vr: (Math.random() - 0.5) * 0.04,
+      w: Math.random() * 7 + 3,
+      h: Math.random() * 3 + 1.5,
+      color: GOLD[Math.floor(Math.random() * GOLD.length)],
+      opacity: Math.random() * 0.28 + 0.08,
+    })
+
     const init = () => {
       resize()
-      particles = Array.from({ length: count }, () => ({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        size: Math.random() * 1.5 + 0.5,
-        opacity: Math.random() * 0.25 + 0.08,
-      }))
+      pieces = Array.from({ length: count }, () => makePiece())
     }
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-      for (const p of particles) {
+      for (let i = 0; i < pieces.length; i++) {
+        const p = pieces[i]
         p.x += p.vx
         p.y += p.vy
+        p.rotation += p.vr
 
-        // Wrap around edges
-        if (p.x < 0) p.x = canvas.width
-        if (p.x > canvas.width) p.x = 0
-        if (p.y < 0) p.y = canvas.height
-        if (p.y > canvas.height) p.y = 0
+        // When a piece exits the bottom, recycle it from the top
+        if (p.y > canvas.height + 12) {
+          pieces[i] = makePiece(-12)
+          continue
+        }
+        if (p.x < -12) p.x = canvas.width + 12
+        if (p.x > canvas.width + 12) p.x = -12
 
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`
-        ctx.fill()
+        ctx.save()
+        ctx.translate(p.x, p.y)
+        ctx.rotate(p.rotation)
+        ctx.globalAlpha = p.opacity
+        ctx.fillStyle = p.color
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h)
+        ctx.restore()
       }
 
       animationId = requestAnimationFrame(draw)
