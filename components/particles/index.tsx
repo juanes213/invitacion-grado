@@ -15,14 +15,14 @@ interface Piece {
   opacity: number
 }
 
-const GOLD = ['#D4AF37', '#C9A227', '#B8960C', '#DAA520', '#E8C84A', '#BFA020']
+const COLORS = ['#000000', '#000000', '#000000', '#000000', '#000000', '#000000']
 
 interface ParticlesProps {
   count?: number
   className?: string
 }
 
-export function Particles({ count = 60, className }: ParticlesProps) {
+export function Particles({ count = 200, className }: ParticlesProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -47,10 +47,10 @@ export function Particles({ count = 60, className }: ParticlesProps) {
       vy: Math.random() * 0.7 + 0.25,
       rotation: Math.random() * Math.PI * 2,
       vr: (Math.random() - 0.5) * 0.04,
-      w: Math.random() * 7 + 3,
-      h: Math.random() * 3 + 1.5,
-      color: GOLD[Math.floor(Math.random() * GOLD.length)],
-      opacity: Math.random() * 0.28 + 0.08,
+      w: Math.random() * 10 + 4,
+      h: Math.random() * 5 + 2,
+      color: COLORS[Math.floor(Math.random() * COLORS.length)],
+      opacity: 1,
     })
 
     const init = () => {
@@ -67,7 +67,6 @@ export function Particles({ count = 60, className }: ParticlesProps) {
         p.y += p.vy
         p.rotation += p.vr
 
-        // When a piece exits the bottom, recycle it from the top
         if (p.y > canvas.height + 12) {
           pieces[i] = makePiece(-12)
           continue

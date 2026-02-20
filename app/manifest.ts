@@ -18,6 +18,6 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Invitación de Grado — M.C.G.B.',
     description: AppData.description,
     start_url: '/',
-    theme_color: '#000000',
+    theme_color: '#EAE0D0',
   }
 }

@@ -30,6 +30,8 @@
   --font-*: initial;
   --font-mono: var(--next-font-mono);
 	--font-chalmers: var(--next-font-chalmers);
+	--font-instrument-serif: var(--next-font-instrument-serif);
+	--font-montserrat: var(--next-font-montserrat);
 
   --ease-*: initial;
   --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -55,8 +57,8 @@
 
 /** Custom theme overwrites **/
 [data-theme=light] {
-  --color-primary: oklch(0.8032 0.0161 67.6);
-	--color-secondary: oklch(0 0 0);
+  --color-primary: oklch(0.92 0.035 75);
+	--color-secondary: oklch(0.3 0 0);
 	--color-contrast: oklch(0.3 0 360);
 }
 [data-theme=dark] {
@@ -147,6 +149,16 @@
 	letter-spacing: .01em;
 	font-size: calc(((32 * 100) / var(--device-width)) * 1vw);
 	@variant dt { font-size: calc(((48 * 100) / var(--device-width)) * 1vw); }
+}
+
+@utility quote {
+  font-family: var(--next-font-instrument-serif);
+	font-style: italic;
+	font-weight: 400;
+	line-height: 120%;
+	letter-spacing: -0.01em;
+	font-size: calc(((28 * 100) / var(--device-width)) * 1vw);
+	@variant dt { font-size: calc(((60 * 100) / var(--device-width)) * 1vw); }
 }
 
 @utility desktop-only {

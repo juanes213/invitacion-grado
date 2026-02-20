@@ -228,11 +228,11 @@ export default function Home() {
 
   return (
     <Wrapper
-      theme="dark"
+      theme="light"
       className="overflow-x-clip"
       onPreloaderComplete={() => setIsPreloaderComplete(true)}
     >
-      <Particles count={45} />
+      <Particles count={200} />
       <Grain />
 
       {/* ═══════════════════════════════════════════════════════════════
@@ -240,32 +240,29 @@ export default function Home() {
           ═══════════════════════════════════════════════════════════════ */}
       <section
         ref={heroRef}
-        className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center"
+        className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center coi-px-6 dt:coi-px-12"
       >
-        <p
-          data-fade-slide
-          className="caption text-secondary/30 uppercase tracking-widest coi-mb-6 will-change-transform"
-        >
-          Invitación
-        </p>
-        <h1
-          data-fade-slide
-          className="h2 text-secondary uppercase will-change-transform"
-        >
-          María Camila
-        </h1>
-        <h1
-          data-fade-slide
-          className="h2 text-secondary uppercase will-change-transform"
-        >
-          Gómez Blanquicett
-        </h1>
-        <p
-          data-fade-slide
-          className="caption text-secondary/30 uppercase tracking-widest coi-mt-6 will-change-transform"
-        >
-          Ingeniera de Sistemas
-        </p>
+        <div className="coi-layout-block-inner flex flex-col items-center">
+          <p
+            data-fade-slide
+            className="quote text-secondary will-change-transform"
+          >
+            Y después de 5 años,
+          </p>
+          <p
+            data-fade-slide
+            className="quote text-secondary will-change-transform"
+          >
+            10 semestres…
+          </p>
+          <p
+            data-fade-slide
+            className="caption text-secondary uppercase tracking-widest coi-mt-10 will-change-transform"
+            style={{ fontFamily: 'var(--next-font-montserrat)' }}
+          >
+            Gracias por ser parte de este capítulo.
+          </p>
+        </div>
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════

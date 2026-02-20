@@ -7,6 +7,7 @@ const colors = {
   sage: 'oklch(0.8211 0.0785 143.5)',
   slate: 'oklch(0.5412 0.0311 233.4)',
   paper: 'oklch(0.8032 0.0161 67.6)',
+  cream: 'oklch(0.92 0.035 75)',
 } as const
 
 const themeNames = ['light', 'dark'] as const
@@ -14,8 +15,8 @@ const colorNames = ['primary', 'secondary', 'contrast'] as const
 
 const themes = {
   light: {
-    primary: colors.paper,
-    secondary: colors.black,
+    primary: colors.cream,
+    secondary: 'oklch(0.15 0 0)',
     contrast: colors.gray,
   },
   dark: {
