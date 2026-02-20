@@ -47,10 +47,10 @@ export function Particles({ count = 200, className }: ParticlesProps) {
       vy: Math.random() * 0.7 + 0.25,
       rotation: Math.random() * Math.PI * 2,
       vr: (Math.random() - 0.5) * 0.04,
-      w: Math.random() * 10 + 4,
-      h: Math.random() * 5 + 2,
+      w: Math.random() * 3 + 1,
+      h: Math.random() * 1.5 + 0.5,
       color: COLORS[Math.floor(Math.random() * COLORS.length)],
-      opacity: 1,
+      opacity: Math.random() * 0.2 + 0.2,
     })
 
     const init = () => {

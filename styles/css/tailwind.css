@@ -32,6 +32,7 @@
 	--font-chalmers: var(--next-font-chalmers);
 	--font-instrument-serif: var(--next-font-instrument-serif);
 	--font-montserrat: var(--next-font-montserrat);
+	--font-playfair: var(--next-font-playfair);
 
   --ease-*: initial;
   --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -57,7 +58,7 @@
 
 /** Custom theme overwrites **/
 [data-theme=light] {
-  --color-primary: oklch(0.92 0.035 75);
+  --color-primary: #F7F3EE;
 	--color-secondary: oklch(0.3 0 0);
 	--color-contrast: oklch(0.3 0 360);
 }

@@ -245,13 +245,28 @@ export default function Home() {
         <div className="coi-layout-block-inner flex flex-col items-center">
           <p
             data-fade-slide
-            className="quote text-secondary will-change-transform"
+            className="text-secondary will-change-transform"
+            style={{
+              fontFamily: 'var(--next-font-playfair)',
+              fontSize: 'calc(((32 * 100) / var(--device-width)) * 1vw)',
+              lineHeight: '1.6',
+              fontStyle: 'italic',
+              fontWeight: 400,
+            }}
           >
             Y después de 5 años,
           </p>
           <p
             data-fade-slide
-            className="quote text-secondary will-change-transform"
+            className="text-secondary will-change-transform"
+            style={{
+              fontFamily: 'var(--next-font-playfair)',
+              fontSize: 'calc(((32 * 100) / var(--device-width)) * 1vw)',
+              lineHeight: '1.6',
+              fontStyle: 'italic',
+              fontWeight: 400,
+              marginTop: 'calc(((8 * 100) / var(--device-width)) * 1vw)',
+            }}
           >
             10 semestres…
           </p>

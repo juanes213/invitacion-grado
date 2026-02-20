@@ -1,4 +1,4 @@
-import { Instrument_Serif, Montserrat } from 'next/font/google'
+import { Instrument_Serif, Montserrat, Playfair_Display } from 'next/font/google'
 import localFont from 'next/font/local'
 
 const mono = localFont({
@@ -60,7 +60,15 @@ const montserrat = Montserrat({
   preload: true,
 })
 
-const fonts = [mono, chalmers, instrumentSerif, montserrat]
+const playfair = Playfair_Display({
+  weight: ['400', '600', '700'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--next-font-playfair',
+  preload: true,
+})
+
+const fonts = [mono, chalmers, instrumentSerif, montserrat, playfair]
 const fontsVariable = fonts.map((font) => font.variable).join(' ')
 
 export { fontsVariable }

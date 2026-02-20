@@ -7,7 +7,7 @@ const colors = {
   sage: 'oklch(0.8211 0.0785 143.5)',
   slate: 'oklch(0.5412 0.0311 233.4)',
   paper: 'oklch(0.8032 0.0161 67.6)',
-  cream: 'oklch(0.92 0.035 75)',
+  cream: '#F7F3EE',
 } as const
 
 const themeNames = ['light', 'dark'] as const
