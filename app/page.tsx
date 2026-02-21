@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Grain } from '~/components/grain'
 import { Marquee } from '~/components/marquee'
 import { Particles } from '~/components/particles'
+import { Typewriter } from '~/components/typewriter'
 import { Wrapper } from '~/components/wrapper'
 import { useFadeSlide } from '~/hooks/use-fade-slide'
 import { useLineReveal } from '~/hooks/use-line-reveal'
@@ -243,8 +244,10 @@ export default function Home() {
         className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center coi-px-6 dt:coi-px-12"
       >
         <div className="coi-layout-block-inner flex flex-col items-center">
-          <p
-            data-fade-slide
+          <Typewriter
+            text="Y después de 5 años,"
+            speed={50}
+            delay={2.6}
             className="text-secondary will-change-transform"
             style={{
               fontFamily: 'var(--next-font-playfair)',
@@ -252,12 +255,13 @@ export default function Home() {
               lineHeight: '1.6',
               fontStyle: 'italic',
               fontWeight: 400,
+              display: 'block',
             }}
-          >
-            Y después de 5 años,
-          </p>
-          <p
-            data-fade-slide
+          />
+          <Typewriter
+            text="10 semestres…"
+            speed={50}
+            delay={3.7}
             className="text-secondary will-change-transform"
             style={{
               fontFamily: 'var(--next-font-playfair)',
@@ -266,17 +270,19 @@ export default function Home() {
               fontStyle: 'italic',
               fontWeight: 400,
               marginTop: 'calc(((8 * 100) / var(--device-width)) * 1vw)',
+              display: 'block',
             }}
-          >
-            10 semestres…
-          </p>
-          <p
-            data-fade-slide
+          />
+          <Typewriter
+            text="Gracias por ser parte de este capítulo."
+            speed={50}
+            delay={4.4}
             className="caption text-secondary uppercase tracking-widest coi-mt-10 will-change-transform"
-            style={{ fontFamily: 'var(--next-font-montserrat)' }}
-          >
-            Gracias por ser parte de este capítulo.
-          </p>
+            style={{
+              fontFamily: 'var(--next-font-montserrat)',
+              display: 'block',
+            }}
+          />
         </div>
       </section>
 
