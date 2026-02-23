@@ -312,7 +312,7 @@ export default function Home() {
           ═══════════════════════════════════════════════════════════════ */}
       <section
         ref={invitationRef}
-        className="relative z-10 flex flex-col items-center text-center coi-py-28 dt:coi-py-36"
+        className="relative z-10 flex flex-col items-center text-center coi-py-36 dt:coi-py-44"
       >
         <div className="coi-layout-block-inner flex flex-col items-center">
 
@@ -331,7 +331,7 @@ export default function Home() {
 
           <div
             data-line-reveal
-            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mt-12 coi-mb-12 will-change-transform"
+            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mt-26 coi-mb-26 will-change-transform"
           />
 
           {/* Frase de apertura */}
@@ -351,7 +351,7 @@ export default function Home() {
           {/* Mi grado en script */}
           <p
             data-fade-slide
-            className="text-secondary will-change-transform coi-mt-8"
+            className="text-secondary will-change-transform coi-mt-34"
             style={{
               fontFamily: 'var(--next-font-great-vibes)',
               fontSize: 'calc(((56 * 100) / var(--device-width)) * 1vw)',
@@ -363,7 +363,7 @@ export default function Home() {
 
           <div
             data-line-reveal
-            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mt-8 coi-mb-8 will-change-transform"
+            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mt-32 coi-mb-32 will-change-transform"
           />
 
           {/* Nombre en mayúsculas */}
@@ -384,7 +384,7 @@ export default function Home() {
           {/* Carrera en script */}
           <p
             data-fade-slide
-            className="text-secondary will-change-transform coi-mt-3"
+            className="text-secondary will-change-transform coi-mt-24"
             style={{
               fontFamily: 'var(--next-font-great-vibes)',
               fontSize: 'calc(((36 * 100) / var(--device-width)) * 1vw)',
@@ -394,43 +394,36 @@ export default function Home() {
             Ingeniería de Sistemas y Computación
           </p>
 
-          <p
-            data-fade-slide
-            className="caption text-secondary/30 uppercase tracking-widest coi-mt-2 will-change-transform"
-          >
-            Universidad del Norte
-          </p>
-
           <div
             data-line-reveal
-            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mt-10 coi-mb-10 will-change-transform"
+            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mt-36 coi-mb-36 will-change-transform"
           />
 
           {/* Fecha y hora */}
           <p
             data-fade-slide
-            className="caption text-secondary/30 uppercase tracking-widest coi-mb-4 will-change-transform"
+            className="caption text-secondary/30 uppercase tracking-widest will-change-transform"
           >
             Cena de celebración
           </p>
 
           <p
             data-fade-slide
-            className="contact text-secondary uppercase will-change-transform"
+            className="contact text-secondary uppercase will-change-transform coi-mt-22"
           >
             Viernes, 13 de Marzo de 2026
           </p>
 
           <p
             data-fade-slide
-            className="h2 text-secondary leading-none coi-mt-5 coi-mb-5 will-change-transform"
+            className="h2 text-secondary leading-none will-change-transform coi-mt-30 coi-mb-30"
           >
             8:00 PM
           </p>
 
           <div
             data-line-reveal
-            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/10 coi-mb-5 will-change-transform"
+            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/10 coi-mb-28 will-change-transform"
           />
 
           {/* Lugar */}
@@ -442,31 +435,31 @@ export default function Home() {
           </p>
           <p
             data-fade-slide
-            className="caption text-secondary/30 uppercase tracking-widest coi-mt-2 will-change-transform"
+            className="caption text-secondary/30 uppercase tracking-widest coi-mt-16 will-change-transform"
           >
             Cra. 49c #76-164, Barranquilla
           </p>
 
           <div
             data-line-reveal
-            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/10 coi-mt-10 coi-mb-10 will-change-transform"
+            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/10 coi-mt-36 coi-mb-36 will-change-transform"
           />
 
           {/* Dress code */}
           <p
             data-fade-slide
-            className="caption text-secondary/30 uppercase tracking-widest coi-mb-4 will-change-transform"
+            className="caption text-secondary/30 uppercase tracking-widest will-change-transform"
           >
             Dress code
           </p>
-          <div className="flex items-center coi-gap-10 dt:coi-gap-16">
-            <div className="flex flex-col items-center coi-gap-1">
+          <div className="flex items-center coi-gap-14 dt:coi-gap-20 coi-mt-24">
+            <div className="flex flex-col items-center coi-gap-3">
               <p data-fade-slide className="contact text-secondary uppercase will-change-transform">Hombres</p>
               <p data-fade-slide className="caption text-secondary/30 uppercase tracking-widest will-change-transform">Formal</p>
             </div>
-            <div className="flex flex-col items-center coi-gap-1">
+            <div className="flex flex-col items-center coi-gap-3">
               <p data-fade-slide className="contact text-secondary uppercase will-change-transform">Mujeres</p>
-              <p data-fade-slide className="caption text-secondary/30 uppercase tracking-widest will-change-transform">Cóctel</p>
+              <p data-fade-slide className="caption text-secondary/30 uppercase tracking-widest will-change-transform">Traje Cóctel</p>
             </div>
           </div>
         </div>
@@ -478,16 +471,30 @@ export default function Home() {
       <section ref={detailsRef} />
 
       {/* ═══════════════════════════════════════════════════════════════
-          COUNTDOWN + DRESS CODE
+          COUNTDOWN
           ═══════════════════════════════════════════════════════════════ */}
       <section
         ref={countdownRef}
         className="relative z-10 flex flex-col items-center text-center coi-py-20 dt:coi-py-28"
       >
         <div className="coi-layout-block-inner flex flex-col items-center">
+
+          {/* Separador de entrada */}
+          <div
+            data-line-reveal
+            className="w-full coi-h-px bg-secondary/10 coi-mb-14 will-change-transform"
+          />
+
           <p
             data-fade-slide
-            className="caption text-secondary/30 uppercase tracking-widest coi-mb-8 will-change-transform"
+            className="caption text-secondary/20 uppercase tracking-widest coi-mb-2 will-change-transform"
+            style={{ letterSpacing: '0.25em' }}
+          >
+            13 · 03 · 2026
+          </p>
+          <p
+            data-fade-slide
+            className="caption text-secondary/30 uppercase tracking-widest coi-mb-10 will-change-transform"
           >
             Faltan
           </p>
