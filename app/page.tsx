@@ -317,81 +317,96 @@ export default function Home() {
         className="relative z-10 flex flex-col items-center text-center coi-py-28 dt:coi-py-36"
       >
         <div className="coi-layout-block-inner flex flex-col items-center">
-          <div
-            data-line-reveal
-            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mb-14 dt:coi-mb-18 will-change-transform"
+
+          {/* Logo */}
+          <img
+            data-fade-slide
+            src="/logo-uninorte.png"
+            alt="Universidad del Norte"
+            className="will-change-transform"
+            style={{
+              width: '65%',
+              maxWidth: 400,
+              height: 'auto',
+            }}
           />
 
+          <div
+            data-line-reveal
+            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mt-12 coi-mb-12 will-change-transform"
+          />
+
+          {/* Nombre en script */}
           <p
             data-fade-slide
-            className="caption text-secondary/30 uppercase tracking-widest coi-mb-8 will-change-transform"
+            className="text-secondary will-change-transform"
+            style={{
+              fontFamily: 'var(--next-font-great-vibes)',
+              fontSize: 'calc(((52 * 100) / var(--device-width)) * 1vw)',
+              lineHeight: 1.2,
+            }}
           >
-            Te invita a celebrar su graduación como
+            María Camila Gómez Blanquicett
+          </p>
+
+          {/* Texto de invitación */}
+          <p
+            data-fade-slide
+            className="caption text-secondary/40 uppercase tracking-widest coi-mt-8 coi-mb-2 will-change-transform"
+          >
+            tiene el honor de invitarte a celebrar su graduación como
+          </p>
+
+          {/* Título en script */}
+          <p
+            data-fade-slide
+            className="text-secondary will-change-transform"
+            style={{
+              fontFamily: 'var(--next-font-great-vibes)',
+              fontSize: 'calc(((38 * 100) / var(--device-width)) * 1vw)',
+              lineHeight: 1.4,
+            }}
+          >
+            Ingeniería de Sistemas y Computación
           </p>
 
           <p
             data-fade-slide
-            className="contact text-secondary uppercase will-change-transform"
-          >
-            Ingeniera de Sistemas
-          </p>
-          <p
-            data-fade-slide
-            className="caption text-secondary/30 uppercase tracking-widest coi-mt-3 will-change-transform"
+            className="caption text-secondary/30 uppercase tracking-widest coi-mt-2 will-change-transform"
           >
             Universidad del Norte
           </p>
 
           <div
             data-line-reveal
-            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mt-14 dt:coi-mt-18 will-change-transform"
-          />
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════
-          DETALLES DE LA CENA
-          ═══════════════════════════════════════════════════════════════ */}
-      <section
-        ref={detailsRef}
-        className="relative z-10 flex flex-col items-center text-center coi-py-20 dt:coi-py-28"
-      >
-        <div className="coi-layout-block-inner flex flex-col items-center">
-          <p
-            data-fade-slide
-            className="caption text-secondary/30 uppercase tracking-widest coi-mb-10 will-change-transform"
-          >
-            La Cena
-          </p>
-
-          <div
-            data-line-reveal
-            className="w-full coi-h-px bg-secondary/10 coi-mb-10 will-change-transform"
+            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mt-12 coi-mb-12 will-change-transform"
           />
 
+          {/* Detalles de la cena */}
           <p
             data-fade-slide
-            className="p text-secondary/50 uppercase tracking-widest will-change-transform"
+            className="caption text-secondary/30 uppercase tracking-widest coi-mb-6 will-change-transform"
           >
-            Viernes
+            Cena de celebración
           </p>
+
           <p
             data-fade-slide
             className="contact text-secondary uppercase will-change-transform"
           >
-            13 de Marzo de 2026
+            Viernes, 13 de Marzo de 2026
           </p>
 
           <p
             data-fade-slide
-            className="h2 text-secondary leading-none coi-mt-8 coi-mb-8 will-change-transform"
+            className="h2 text-secondary leading-none coi-mt-6 coi-mb-6 will-change-transform"
           >
             8:00 PM
           </p>
 
           <div
             data-line-reveal
-            className="w-full coi-h-px bg-secondary/10 coi-mb-10 will-change-transform"
+            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/10 coi-mb-6 will-change-transform"
           />
 
           <p
@@ -402,17 +417,17 @@ export default function Home() {
           </p>
           <p
             data-fade-slide
-            className="caption text-secondary/30 uppercase tracking-widest coi-mt-3 will-change-transform"
+            className="caption text-secondary/30 uppercase tracking-widest coi-mt-2 will-change-transform"
           >
             Cra. 49c #76-164
           </p>
-
-          <div
-            data-line-reveal
-            className="w-full coi-h-px bg-secondary/10 coi-mt-10 will-change-transform"
-          />
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          DETALLES (ref vacío para mantener scroll trigger del countdown)
+          ═══════════════════════════════════════════════════════════════ */}
+      <section ref={detailsRef} />
 
       {/* ═══════════════════════════════════════════════════════════════
           COUNTDOWN + DRESS CODE

@@ -1,4 +1,4 @@
-import { Instrument_Serif, Montserrat, Playfair_Display } from 'next/font/google'
+import { Great_Vibes, Instrument_Serif, Montserrat, Playfair_Display } from 'next/font/google'
 import localFont from 'next/font/local'
 
 const mono = localFont({
@@ -68,7 +68,15 @@ const playfair = Playfair_Display({
   preload: true,
 })
 
-const fonts = [mono, chalmers, instrumentSerif, montserrat, playfair]
+const greatVibes = Great_Vibes({
+  weight: ['400'],
+  style: ['normal'],
+  display: 'swap',
+  variable: '--next-font-great-vibes',
+  preload: true,
+})
+
+const fonts = [mono, chalmers, instrumentSerif, montserrat, playfair, greatVibes]
 const fontsVariable = fonts.map((font) => font.variable).join(' ')
 
 export { fontsVariable }
