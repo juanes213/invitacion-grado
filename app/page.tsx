@@ -169,7 +169,6 @@ function PlaceholderSlot() {
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function Home() {
-  const [isPreloaderComplete, setIsPreloaderComplete] = useState(false)
   const timeLeft = useCountdown(TARGET_DATE)
 
   // Refs
@@ -187,10 +186,10 @@ export default function Home() {
 
   // ── Animations ────────────────────────────────────────────────────────────
   useFadeSlide({
-    isActive: isPreloaderComplete,
+    isActive: true,
     rootRef: heroRef,
-    delay: 0.5,
-    duration: 1.8,
+    delay: 0.3,
+    duration: 1.2,
     y: 24,
     stagger: 0.14,
   })
@@ -231,7 +230,6 @@ export default function Home() {
     <Wrapper
       theme="light"
       className="overflow-x-clip"
-      onPreloaderComplete={() => setIsPreloaderComplete(true)}
     >
       <Particles count={200} />
       <Grain />
@@ -247,7 +245,7 @@ export default function Home() {
           <Typewriter
             text="Y después de 5 años,"
             speed={50}
-            delay={2.6}
+            delay={1.0}
             className="text-secondary will-change-transform"
             style={{
               fontFamily: 'var(--next-font-playfair)',
@@ -261,7 +259,7 @@ export default function Home() {
           <Typewriter
             text="10 semestres…"
             speed={50}
-            delay={3.7}
+            delay={2.1}
             className="text-secondary will-change-transform"
             style={{
               fontFamily: 'var(--next-font-playfair)',
@@ -276,7 +274,7 @@ export default function Home() {
           <Typewriter
             text="Gracias por ser parte de este capítulo."
             speed={50}
-            delay={4.4}
+            delay={3.3}
             className="caption text-secondary uppercase tracking-widest coi-mt-10 will-change-transform"
             style={{
               fontFamily: 'var(--next-font-montserrat)',
