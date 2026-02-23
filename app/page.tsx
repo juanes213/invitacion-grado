@@ -336,34 +336,60 @@ export default function Home() {
             className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mt-12 coi-mb-12 will-change-transform"
           />
 
-          {/* Nombre en script */}
+          {/* Frase de apertura */}
           <p
             data-fade-slide
-            className="text-secondary will-change-transform"
+            className="p text-secondary/50 will-change-transform"
+            style={{
+              fontFamily: 'var(--next-font-playfair)',
+              fontStyle: 'italic',
+              maxWidth: '36ch',
+              lineHeight: 1.7,
+            }}
+          >
+            Es para mis padres y para mí, un motivo de orgullo celebrar con ustedes este gran logro.
+          </p>
+
+          {/* Mi grado en script */}
+          <p
+            data-fade-slide
+            className="text-secondary will-change-transform coi-mt-8"
             style={{
               fontFamily: 'var(--next-font-great-vibes)',
-              fontSize: 'calc(((52 * 100) / var(--device-width)) * 1vw)',
+              fontSize: 'calc(((56 * 100) / var(--device-width)) * 1vw)',
               lineHeight: 1.2,
+            }}
+          >
+            Mi grado
+          </p>
+
+          <div
+            data-line-reveal
+            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mt-8 coi-mb-8 will-change-transform"
+          />
+
+          {/* Nombre en mayúsculas */}
+          <p
+            data-fade-slide
+            className="text-secondary uppercase will-change-transform"
+            style={{
+              fontFamily: 'var(--next-font-montserrat)',
+              fontSize: 'calc(((22 * 100) / var(--device-width)) * 1vw)',
+              fontWeight: 700,
+              letterSpacing: '0.08em',
+              lineHeight: 1.3,
             }}
           >
             María Camila Gómez Blanquicett
           </p>
 
-          {/* Texto de invitación */}
+          {/* Carrera en script */}
           <p
             data-fade-slide
-            className="caption text-secondary/40 uppercase tracking-widest coi-mt-8 coi-mb-2 will-change-transform"
-          >
-            tiene el honor de invitarte a celebrar su graduación como
-          </p>
-
-          {/* Título en script */}
-          <p
-            data-fade-slide
-            className="text-secondary will-change-transform"
+            className="text-secondary will-change-transform coi-mt-3"
             style={{
               fontFamily: 'var(--next-font-great-vibes)',
-              fontSize: 'calc(((38 * 100) / var(--device-width)) * 1vw)',
+              fontSize: 'calc(((36 * 100) / var(--device-width)) * 1vw)',
               lineHeight: 1.4,
             }}
           >
@@ -379,13 +405,13 @@ export default function Home() {
 
           <div
             data-line-reveal
-            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mt-12 coi-mb-12 will-change-transform"
+            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/15 coi-mt-10 coi-mb-10 will-change-transform"
           />
 
-          {/* Detalles de la cena */}
+          {/* Fecha y hora */}
           <p
             data-fade-slide
-            className="caption text-secondary/30 uppercase tracking-widest coi-mb-6 will-change-transform"
+            className="caption text-secondary/30 uppercase tracking-widest coi-mb-4 will-change-transform"
           >
             Cena de celebración
           </p>
@@ -399,16 +425,17 @@ export default function Home() {
 
           <p
             data-fade-slide
-            className="h2 text-secondary leading-none coi-mt-6 coi-mb-6 will-change-transform"
+            className="h2 text-secondary leading-none coi-mt-5 coi-mb-5 will-change-transform"
           >
             8:00 PM
           </p>
 
           <div
             data-line-reveal
-            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/10 coi-mb-6 will-change-transform"
+            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/10 coi-mb-5 will-change-transform"
           />
 
+          {/* Lugar */}
           <p
             data-fade-slide
             className="contact text-secondary uppercase will-change-transform"
@@ -419,8 +446,31 @@ export default function Home() {
             data-fade-slide
             className="caption text-secondary/30 uppercase tracking-widest coi-mt-2 will-change-transform"
           >
-            Cra. 49c #76-164
+            Cra. 49c #76-164, Barranquilla
           </p>
+
+          <div
+            data-line-reveal
+            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/10 coi-mt-10 coi-mb-10 will-change-transform"
+          />
+
+          {/* Dress code */}
+          <p
+            data-fade-slide
+            className="caption text-secondary/30 uppercase tracking-widest coi-mb-4 will-change-transform"
+          >
+            Dress code
+          </p>
+          <div className="flex items-center coi-gap-10 dt:coi-gap-16">
+            <div className="flex flex-col items-center coi-gap-1">
+              <p data-fade-slide className="contact text-secondary uppercase will-change-transform">Hombres</p>
+              <p data-fade-slide className="caption text-secondary/30 uppercase tracking-widest will-change-transform">Formal</p>
+            </div>
+            <div className="flex flex-col items-center coi-gap-1">
+              <p data-fade-slide className="contact text-secondary uppercase will-change-transform">Mujeres</p>
+              <p data-fade-slide className="caption text-secondary/30 uppercase tracking-widest will-change-transform">Cóctel</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -477,48 +527,6 @@ export default function Home() {
             ))}
           </div>
 
-          <div
-            data-line-reveal
-            className="w-full coi-h-px bg-secondary/10 coi-my-14 dt:coi-my-18 will-change-transform"
-          />
-
-          <p
-            data-fade-slide
-            className="caption text-secondary/30 uppercase tracking-widest coi-mb-8 will-change-transform"
-          >
-            Código de vestimenta
-          </p>
-
-          <div className="flex flex-col dt:flex-row dt:items-center coi-gap-6 dt:coi-gap-16">
-            <div className="flex flex-col items-center coi-gap-1">
-              <p
-                data-fade-slide
-                className="contact text-secondary uppercase will-change-transform"
-              >
-                Hombres
-              </p>
-              <p
-                data-fade-slide
-                className="caption text-secondary/30 uppercase tracking-widest will-change-transform"
-              >
-                Vestimenta Formal
-              </p>
-            </div>
-            <div className="flex flex-col items-center coi-gap-1">
-              <p
-                data-fade-slide
-                className="contact text-secondary uppercase will-change-transform"
-              >
-                Mujeres
-              </p>
-              <p
-                data-fade-slide
-                className="caption text-secondary/30 uppercase tracking-widest will-change-transform"
-              >
-                Coctel
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
