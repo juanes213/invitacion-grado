@@ -88,6 +88,9 @@ const ROW_4: MediaItem[] = [
   { src: '/carousel/foto-39.jpeg' },
   { src: '/carousel/foto-40.jpeg' },
   { src: '/carousel/foto-41.jpeg' },
+  { src: '/carousel/foto-42.jpeg' },
+  { src: '/carousel/foto-43.jpeg' },
+  { src: '/carousel/foto-44.jpeg' },
   { src: '/carousel/video-09.mp4' },
   { src: '/carousel/video-10.mp4' },
   { src: '/carousel/video-17.mp4' },
@@ -128,6 +131,8 @@ function pad(n: number) {
 }
 
 // ── Media slot (imagen o video) ──────────────────────────────────────────────
+const MAX_VIDEO_SECONDS = 5
+
 function MediaSlot({ src }: { src: string }) {
   const cls = 'shrink-0 coi-w-200 dt:coi-w-280 object-cover'
 
@@ -141,6 +146,10 @@ function MediaSlot({ src }: { src: string }) {
         loop
         muted
         playsInline
+        onTimeUpdate={(e) => {
+          const v = e.currentTarget
+          if (v.currentTime > MAX_VIDEO_SECONDS) v.currentTime = 0
+        }}
       />
     )
   }
