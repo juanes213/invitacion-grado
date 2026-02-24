@@ -452,16 +452,12 @@ export default function Home() {
           >
             Dress code
           </p>
-          <div className="flex items-center coi-gap-14 dt:coi-gap-20 coi-mt-24">
-            <div className="flex flex-col items-center coi-gap-3">
-              <p data-fade-slide className="contact text-secondary uppercase will-change-transform">Hombres</p>
-              <p data-fade-slide className="caption text-secondary/30 uppercase tracking-widest will-change-transform">Formal</p>
-            </div>
-            <div className="flex flex-col items-center coi-gap-3">
-              <p data-fade-slide className="contact text-secondary uppercase will-change-transform">Mujeres</p>
-              <p data-fade-slide className="caption text-secondary/30 uppercase tracking-widest will-change-transform">Traje Cóctel</p>
-            </div>
-          </div>
+          <p
+            data-fade-slide
+            className="contact text-secondary uppercase will-change-transform coi-mt-6"
+          >
+            Traje Cóctel
+          </p>
         </div>
       </section>
 
@@ -485,13 +481,6 @@ export default function Home() {
             className="w-full coi-h-px bg-secondary/10 coi-mb-14 will-change-transform"
           />
 
-          <p
-            data-fade-slide
-            className="caption text-secondary/20 uppercase tracking-widest coi-mb-2 will-change-transform"
-            style={{ letterSpacing: '0.25em' }}
-          >
-            13 · 03 · 2026
-          </p>
           <p
             data-fade-slide
             className="caption text-secondary/30 uppercase tracking-widest coi-mb-10 will-change-transform"
