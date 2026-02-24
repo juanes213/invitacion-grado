@@ -146,6 +146,7 @@ function MediaSlot({ src }: { src: string }) {
         loop
         muted
         playsInline
+        preload="auto"
         onTimeUpdate={(e) => {
           const v = e.currentTarget
           if (v.currentTime > MAX_VIDEO_SECONDS) v.currentTime = 0
@@ -160,7 +161,8 @@ function MediaSlot({ src }: { src: string }) {
       alt=""
       className={cls}
       style={{ aspectRatio: '4/3' }}
-      loading="lazy"
+      loading="eager"
+      decoding="async"
       draggable={false}
     />
   )
