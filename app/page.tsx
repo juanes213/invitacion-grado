@@ -456,6 +456,19 @@ export default function Home() {
             className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/10 coi-mt-36 coi-mb-36 will-change-transform"
           />
 
+          {/* Lluvia de sobres */}
+          <p
+            data-fade-slide
+            className="contact text-secondary uppercase will-change-transform"
+          >
+            Lluvia de sobres
+          </p>
+
+          <div
+            data-line-reveal
+            className="coi-w-40 dt:coi-w-60 coi-h-px bg-secondary/10 coi-mt-16 coi-mb-16 will-change-transform"
+          />
+
           {/* Dress code */}
           <p
             data-fade-slide
